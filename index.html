@@ -4,37 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-
     <link rel="stylesheet" href="style.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
-    <script src="script.js" defer></script>
+    
 </head>
 <body>
-    <div class="calculator" id = "calculatorMain">
-        <div>
-            <input type="text" id="display" disabled>
-            <div class="buttons">
-                <button class="btn" id="clear">C</button>
-                <button class="btn" id="backspace">←</button>
-                <button class="btn operator" id="divide">/</button>
-                <button class="btn operator" id="multiply">*</button>     
-                <button class="btn number" id="seven">7</button>
-                <button class="btn number" id="eight">8</button>
-                <button class="btn number" id="nine">9</button>
-                <button class="btn operator" id="subtract">-</button>
-                <button class="btn number" id="four">4</button>
-                <button class="btn number" id="five">5</button>
-                <button class="btn number" id="six">6</button>
-                <button class="btn operator" id="add">+</button>   
-                <button class="btn number" id="one">1</button>
-                <button class="btn number" id="two">2</button>
-                <button class="btn number" id="three">3</button>
-                <button class="btn operator" id="equals">=</button>
-                <button class="btn number" id="zero">0</button>
-                <button class="btn" id="decimal">.</button>
+    <div id=""calculator>
+        <input id = "display"> 
+        <div id = "keys">
+            <button onclick="appendToDisplay('+')" class="operate-btn">+</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('-')" class="operate-btn">-</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('*')" class="operate-btn">*</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('/')" class="operate-btn">/</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="calculate('=')"> = </button>
+            <button onclick="clearDisplay('C')">C</button>
+
         </div>
-    </div>
+       
+
     </div>
     
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,26 +1,20 @@
-const display = document.getElementById("display");
-const buttons = document.querySelectorAll(".btn");
+const display = document.getElementById('display');
 
-buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const btnValue = button.textContent;
 
-    if (btnValue === "C") {
-      display.value = "";
-    } else if (btnValue === "←") {
-      display.value = display.value.slice(0, -1);
-    } else if (btnValue === "=") {
-      try {
-        const result = math.evaluate(display.value);
-        display.value = Number.isInteger(result)
-          ? result
-          : Number.parseFloat(result.toFixed(8)).toString();
-      } catch {
-        display.value = "Error";
-        console.error("Calculation error:", error);
-      }
-    } else {
-      display.value += btnValue;
-    }
-  });
-});
+function appendToDisplay(value) { 
+  display.value += value; 
+}
+
+function clearDisplay() { 
+  display.value = ""; 
+}
+
+function calculate() { 
+  try { 
+    display.value = eval(display.value); 
+    
+  }
+  catch (error) { 
+    display.value = 'Error'; 
+  }
+}
