@@ -3,15 +3,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #282c34;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 #calculator {
   font-family: Arial, sans-serif;
   background-color: black;
   border-radius: 10px;
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   padding: 15px;
 }
 
@@ -35,7 +38,6 @@ body {
 }
 
 button {
-  width: 60px;
   height: 60px;
   border-radius: 30px;
   border: none;
@@ -52,4 +54,19 @@ button {
 
 button:hover {
   opacity: 0.8;
+}
+
+@media (max-width: 480px) {
+  #calculator {
+    max-width: 280px;
+  }
+  
+  #display {
+    font-size: 1.8rem;
+  }
+  
+  button {
+    height: 50px;
+    font-size: 1.3rem;
+  }
 }
