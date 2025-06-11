@@ -24,7 +24,7 @@ function calculate() {
 
 document.addEventListener('keydown', function(event) { 
   const key = event.key; 
-  if (key === 'Enter' || key === '='){ 
+  if (key === 'Enter'){ 
     calculate(); 
     event.preventDefault();
   }
