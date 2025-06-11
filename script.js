@@ -31,12 +31,14 @@ document.addEventListener('keydown', function(event) {
   if (keys.includes(key)) { 
     this.appendToDisplay(key);
   event.preventDefault(); 
+  
   }
   if(key === 'Backspace'){ 
     display.value = display.value.slice(0, -1); 
     event.preventDefault(); 
+   
   }
-  else { 
-    event.preventDefault(); 
-  }
+
+  event.preventDefault();
+  
 })
